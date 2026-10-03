@@ -37,24 +37,25 @@ Explanation: Only 1 is present so the missing element is 2.
 **Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-03T07:58:40.287Z  
+**Submitted:** 2026-10-03T08:28:21.123Z  
 
 ```cpp
 class Solution {
   public:
     int missingNum(vector<int>& arr) {
         // code here
-        long long int n=arr.size();
-    
-        long long int size=n+1;
-        long long int calsum=size*(size+1)/2;
-        
-        long long int sum=0;
+        int n=arr.size();
+        int x=0;
         for(int i=0;i<n;i++){
-           sum=sum+arr[i];
+           x=x^arr[i]; 
         }
         
-        return calsum-sum;
+        int y=0;
+        for(int i=1;i<=n+1;i++){
+            y=y^i;
+        }
+        
+        return x^y;
     }
 };
 ```
