@@ -49,9 +49,9 @@ rotate 2 steps to the right: [3,99,-1,-100]
 ## Solution
 
 **Language:** C++  
-**Runtime:** 0 ms  
-**Memory:** 8.3 MB  
-**Submitted:** 2026-10-03T16:42:04.703Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 263.3 MB (beats 53.41%)  
+**Submitted:** 2026-10-03T16:45:14.029Z  
 
 ```cpp
 class Solution {
@@ -59,6 +59,9 @@ public:
     void rotate(vector<int>& nums, int k) {
         int n=nums.size();
         k=k%n;
+        if(!k){
+            return;
+        }
         // reverse the array
         int i=0,j=n-1;
         while(i<j){
