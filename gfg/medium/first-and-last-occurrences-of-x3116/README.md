@@ -34,7 +34,7 @@ Explanation: No occurrence of 4 in the array, so, output is [-1, -1]
 **Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-07T14:34:19.438Z  
+**Submitted:** 2026-10-07T15:29:27.286Z  
 
 ```cpp
 class Solution {
@@ -79,7 +79,10 @@ class Solution {
             }
         }
         
-        return {FirstIndex,LastIndex};
+        vector<int>ans;
+        ans.push_back(FirstIndex);
+        ans.push_back(LastIndex);
+        return ans;
     }
 };
 ```
