@@ -40,6 +40,9 @@ class Solution {
             }
         }
         
-        return {FirstIndex,LastIndex};
+        vector<int>ans;
+        ans.push_back(FirstIndex);
+        ans.push_back(LastIndex);
+        return ans;
     }
 };
