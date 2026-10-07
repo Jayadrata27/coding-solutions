@@ -12,10 +12,10 @@ class Solution {
                 return true;
             }
             else if(arr[mid]<=k){
-                start=start+1;
+                start=mid+1;
             }
             else{
-                end=end-1;
+                end=mid-1;
             }
         }
         return false;
