@@ -41,8 +41,8 @@ Output: [0]
 
 **Language:** C++  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 23.8 MB (beats 55.21%)  
-**Submitted:** 2026-10-02T18:39:11.485Z  
+**Memory:** 23.9 MB (beats 55.09%)  
+**Submitted:** 2026-10-09T13:34:24.830Z  
 
 ```cpp
 class Solution {
@@ -51,13 +51,13 @@ public:
         int n=nums.size();
         int j=0;
         for(int i=0;i<n;i++){
-           if(nums[i]!=0){
-             nums[j]=nums[i];
-             j++;
-           }
-        }
+            if(nums[i]!=0){
+                nums[j]=nums[i];
+                j++;
+            }
+        };
         while(j<n){
-            nums[j++]=0;
+            nums[j++]={0};
         }
     }
 };
