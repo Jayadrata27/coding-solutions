@@ -34,7 +34,7 @@ Explanation: No occurrence of 4 in the array, so, output is [-1, -1]
 **Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-07T15:29:27.286Z  
+**Submitted:** 2026-10-10T18:29:41.399Z  
 
 ```cpp
 class Solution {
@@ -42,34 +42,33 @@ class Solution {
     vector<int> find(vector<int>& arr, int x) {
         // code here
         int n=arr.size();
-        int start=0,end=n-1;
+        int firstIndex=-1;
         
-        // first occurrences
-        int FirstIndex=-1;
+        int start=0,end=n-1;
         while(start<=end){
             int mid=start+(end-start)/2;
             
             if(arr[mid]==x){
-                FirstIndex=mid;
+                firstIndex=mid;
                 end=mid-1;
             }
             else if(arr[mid]<x){
                 start=mid+1;
             }
             else{
-               end=mid-1;
+                end=mid-1;
             }
         }
         
-        // last occurrences
-         start=0,end=n-1;
-        int LastIndex=-1;
+        
+        int lastIndex=-1;
+        start=0,end=n-1;
         while(start<=end){
             int mid=start+(end-start)/2;
             
             if(arr[mid]==x){
-               LastIndex=mid;
-               start=mid+1;
+                lastIndex=mid;
+                start=mid+1;
             }
             else if(arr[mid]<x){
                 start=mid+1;
@@ -80,8 +79,9 @@ class Solution {
         }
         
         vector<int>ans;
-        ans.push_back(FirstIndex);
-        ans.push_back(LastIndex);
+        ans.push_back(firstIndex);
+        ans.push_back(lastIndex);
+        
         return ans;
     }
 };
