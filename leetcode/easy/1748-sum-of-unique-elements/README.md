@@ -48,8 +48,8 @@ Explanation: The unique elements are [1,2,3,4,5], and the sum is 15.
 
 **Language:** C++  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 10.5 MB (beats 81.13%)  
-**Submitted:** 2026-10-04T07:41:04.231Z  
+**Memory:** 10.5 MB (beats 80.64%)  
+**Submitted:** 2026-10-10T18:40:07.162Z  
 
 ```cpp
 class Solution {
@@ -61,17 +61,17 @@ public:
             bool found=false;
             for(int j=0;j<n;j++){
                 if(i==j){
-                    continue;
+                   continue;
                 }
                 else if(nums[i]==nums[j]){
                     found=true;
                     break;
                 }
+
             }
             if(found==false){
-                sum+=nums[i];
+               sum+=nums[i];
             }
-
         }
         return sum;
     }
