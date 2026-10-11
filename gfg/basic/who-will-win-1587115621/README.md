@@ -30,7 +30,7 @@ Output: false1 ≤ arr[i] ≤ 106
 **Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-07T08:22:46.588Z  
+**Submitted:** 2026-10-11T17:59:17.078Z  
 
 ```cpp
 class Solution {
@@ -39,14 +39,13 @@ class Solution {
         // code here
         int n=arr.size();
         int start=0,end=n-1;
-       
         while(start<=end){
             int mid=start+(end-start)/2;
             
             if(arr[mid]==k){
                 return true;
             }
-            else if(arr[mid]<=k){
+            else if(arr[mid]<k){
                 start=mid+1;
             }
             else{
@@ -54,7 +53,6 @@ class Solution {
             }
         }
         return false;
-     
     }
 };
 ```
