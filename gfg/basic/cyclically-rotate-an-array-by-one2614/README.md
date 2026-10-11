@@ -25,7 +25,7 @@ Explanation: After rotating clock-wise 3 comes in first position.
 **Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-03T16:11:34.099Z  
+**Submitted:** 2026-10-11T18:02:09.875Z  
 
 ```cpp
 class Solution {
