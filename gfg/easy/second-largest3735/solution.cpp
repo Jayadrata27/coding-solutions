@@ -4,9 +4,8 @@ class Solution {
         // code here
         int n=arr.size();
         int largest=arr[0];
-        
         for(int i=1;i<n;i++){
-            if(arr[i]>largest){
+            if(largest<arr[i]){
                 largest=arr[i];
             }
         }
