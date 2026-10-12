@@ -30,7 +30,7 @@ Output: [14, 20, 30, 31, 38]
 **Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-09T14:29:28.547Z  
+**Submitted:** 2026-10-12T18:01:26.552Z  
 
 ```cpp
 class Solution {
@@ -38,16 +38,16 @@ class Solution {
     void selectionSort(vector<int> &arr) {
         // code here
         int n=arr.size();
-        
         for(int i=0;i<n;i++){
             int index=i;
             for(int j=i+1;j<n;j++){
-                if(arr[index]>arr[j]){
-                    index=j;
-                }
+              if(arr[j]<arr[index]){
+                  index=j;
+              }
             }
             swap(arr[index],arr[i]);
         }
+        
     }
 };
 ```
