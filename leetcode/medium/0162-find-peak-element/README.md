@@ -43,7 +43,7 @@ Explanation: Your function can return either index number 1 where the peak eleme
 **Language:** C++  
 **Runtime:** 0 ms (beats 100.00%)  
 **Memory:** 12.8 MB (beats 23.30%)  
-**Submitted:** 2026-10-12T15:54:00.044Z  
+**Submitted:** 2026-10-12T15:55:58.332Z  
 
 ```cpp
 class Solution {
@@ -66,6 +66,9 @@ public:
 
             if(mid==0){
                 mid++;
+            }
+            if(mid==n-1){
+               mid--;
             }
           
             if(nums[mid]>nums[mid-1] && nums[mid]>nums[mid+1]){
