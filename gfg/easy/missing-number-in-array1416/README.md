@@ -37,7 +37,7 @@ Explanation: Only 1 is present so the missing element is 2.
 **Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-03T08:28:21.123Z  
+**Submitted:** 2026-10-12T18:03:48.515Z  
 
 ```cpp
 class Solution {
@@ -47,14 +47,12 @@ class Solution {
         int n=arr.size();
         int x=0;
         for(int i=0;i<n;i++){
-           x=x^arr[i]; 
+            x=x^arr[i];
         }
-        
         int y=0;
-        for(int i=1;i<=n+1;i++){
-            y=y^i;
+        for(int j=1;j<=n+1;j++){
+            y=y^j;
         }
-        
         return x^y;
     }
 };
