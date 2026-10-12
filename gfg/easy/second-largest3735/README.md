@@ -33,7 +33,7 @@ Explanation: The largest element of the array is 10 and the second largest eleme
 **Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-08T10:17:18.602Z  
+**Submitted:** 2026-10-12T17:57:26.924Z  
 
 ```cpp
 class Solution {
@@ -42,9 +42,8 @@ class Solution {
         // code here
         int n=arr.size();
         int largest=arr[0];
-        
         for(int i=1;i<n;i++){
-            if(arr[i]>largest){
+            if(largest<arr[i]){
                 largest=arr[i];
             }
         }
