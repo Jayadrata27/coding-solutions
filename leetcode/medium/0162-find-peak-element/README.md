@@ -42,8 +42,8 @@ Explanation: Your function can return either index number 1 where the peak eleme
 
 **Language:** C++  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 12.8 MB (beats 23.30%)  
-**Submitted:** 2026-10-12T15:55:58.332Z  
+**Memory:** 12.7 MB (beats 23.30%)  
+**Submitted:** 2026-10-12T15:58:01.539Z  
 
 ```cpp
 class Solution {
