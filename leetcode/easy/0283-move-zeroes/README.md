@@ -41,8 +41,8 @@ Output: [0]
 
 **Language:** C++  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 23.9 MB (beats 55.09%)  
-**Submitted:** 2026-10-09T13:34:24.830Z  
+**Memory:** 23.9 MB (beats 55.10%)  
+**Submitted:** 2026-10-12T18:08:06.309Z  
 
 ```cpp
 class Solution {
@@ -55,7 +55,7 @@ public:
                 nums[j]=nums[i];
                 j++;
             }
-        };
+        }
         while(j<n){
             nums[j++]={0};
         }
