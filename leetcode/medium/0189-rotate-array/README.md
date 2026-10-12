@@ -49,23 +49,41 @@ rotate 2 steps to the right: [3,99,-1,-100]
 ## Solution
 
 **Language:** C++  
-**Runtime:** 4 ms (beats 51.09%)  
-**Memory:** 263.2 MB (beats 74.66%)  
-**Submitted:** 2026-10-08T10:36:21.073Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 263.5 MB (beats 33.90%)  
+**Submitted:** 2026-10-12T18:20:29.193Z  
 
 ```cpp
 class Solution {
 public:
     void rotate(vector<int>& nums, int k) {
         int n=nums.size();
-        vector<int>arr(n);
-        for(int i=0;i<n;i++){
-            arr[(i+k)%n]=nums[i];
+        int i=0,j=n-1;
+        k=k%n;
+        while(i<j){
+            int temp=nums[i];
+            nums[i]=nums[j];
+            nums[j]=temp;
+            i++;
+            j--;
+        }
+        i=0,j=k-1;
+         while(i<j){
+            int temp=nums[i];
+            nums[i]=nums[j];
+            nums[j]=temp;
+            i++;
+            j--;
+        }
+        i=k,j=n-1;
+        while(i<j){
+            int temp=nums[i];
+            nums[i]=nums[j];
+            nums[j]=temp;
+            i++;
+            j--;
         }
 
-        for(int i=0;i<n;i++){
-            nums[i]=arr[i];
-        }
     }
 };
 ```
