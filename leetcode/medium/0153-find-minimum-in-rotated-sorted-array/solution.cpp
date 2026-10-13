@@ -8,7 +8,7 @@ public:
             return nums[0];
         }
         if(n==1){
-            nums[n];
+          return nums[n];
         }
 
         while(start<=end){
