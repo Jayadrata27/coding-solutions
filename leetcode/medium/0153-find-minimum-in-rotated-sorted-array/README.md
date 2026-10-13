@@ -58,8 +58,8 @@ Explanation: The original array was [11,13,15,17] and it was rotated 4 times.
 
 **Language:** C++  
 **Runtime:** 0 ms  
-**Memory:** 8.1 MB  
-**Submitted:** 2026-10-13T07:12:59.713Z  
+**Memory:** 8.2 MB  
+**Submitted:** 2026-10-13T07:17:42.407Z  
 
 ```cpp
 class Solution {
@@ -72,7 +72,7 @@ public:
             return nums[0];
         }
         if(n==1){
-          return nums[n];
+          ans=nums[0];
         }
 
         while(start<=end){
