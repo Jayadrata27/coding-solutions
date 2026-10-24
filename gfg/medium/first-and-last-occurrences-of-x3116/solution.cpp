@@ -3,9 +3,9 @@ class Solution {
     vector<int> find(vector<int>& arr, int x) {
         // code here
         int n=arr.size();
-        int firstIndex=-1;
         
         int start=0,end=n-1;
+        int firstIndex=-1;
         while(start<=end){
             int mid=start+(end-start)/2;
             
@@ -21,9 +21,8 @@ class Solution {
             }
         }
         
-        
-        int lastIndex=-1;
         start=0,end=n-1;
+        int lastIndex=-1;
         while(start<=end){
             int mid=start+(end-start)/2;
             
@@ -44,5 +43,6 @@ class Solution {
         ans.push_back(lastIndex);
         
         return ans;
+        
     }
 };
