@@ -32,7 +32,7 @@ Explanation: Rotating the array [1, 2, 3, 4, 5] four times clockwise gives the a
 **Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-24T07:22:38.643Z  
+**Submitted:** 2026-10-24T07:32:46.705Z  
 
 ```cpp
 class Solution {
@@ -40,16 +40,32 @@ class Solution {
     void rotateclockwise(vector<int>& arr, int k) {
         // code here
         int n=arr.size();
-    
-        vector<int>nums(n);
-        for(int i=0;i<n;i++){
-            nums[(i+k)%n]=arr[i];
-        }
+        k=k%n;
         
-        for(int i=0;i<n;i++){
-            arr[i]=nums[i];
+        int i=0,j=n-1;
+        while(i<=j){
+            int temp=arr[i];
+            arr[i]=arr[j];
+            arr[j]=temp;
+            i++;
+            j--;
         }
-        
+        i=0,j=k-1;
+        while(i<=j){
+            int temp=arr[i];
+            arr[i]=arr[j];
+            arr[j]=temp;
+            i++;
+            j--;
+        }
+        i=k,j=n-1;
+        while(i<=j){
+            int temp=arr[i];
+            arr[i]=arr[j];
+            arr[j]=temp;
+            i++;
+            j--;
+        }
     }
 };
 
