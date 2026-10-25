@@ -32,7 +32,7 @@ Explanation: An array that is already sorted should remain unchanged after apply
 **Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-10T17:31:42.478Z  
+**Submitted:** 2026-10-25T06:33:45.496Z  
 
 ```cpp
 class Solution {
@@ -47,6 +47,7 @@ class Solution {
                 }
             }
         }
+    
     }
 };
 ```
