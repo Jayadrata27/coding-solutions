@@ -41,9 +41,9 @@ Explanation: Your function can return either index number 1 where the peak eleme
 ## Solution
 
 **Language:** C++  
-**Runtime:** 0 ms  
-**Memory:** 8.2 MB  
-**Submitted:** 2026-10-12T15:56:28.211Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 12.7 MB (beats 61.54%)  
+**Submitted:** 2026-10-25T07:03:01.974Z  
 
 ```cpp
 class Solution {
@@ -51,32 +51,35 @@ public:
     int findPeakElement(vector<int>& nums) {
         int n=nums.size();
         int start=0,end=n-1;
+
         if(n==1){
             return 0;
         }
-
+        if(nums[0]>nums[1]){
+            return 0;
+        }
+        if(nums[n-1]>nums[n-2]){
+           return n-1;
+        }
 
         while(start<=end){
-            int mid=start+(end-start)/2;
+           int mid=start+(end-start)/2;
+           
+           if(mid==0){
+              mid++;
+           }
 
-            if(mid==0){
-                mid++;
-            }
-            if(mid==n-1){
-               mid--;
-            }
-          
-            if(nums[mid]>nums[mid-1] && nums[mid]>nums[mid+1]){
-                return mid;
-            }
-            else if(nums[mid]>nums[mid-1]){
-                start=mid+1;
-            }
-            else{
-                end=mid-1;
-            }
+           if(nums[mid]>nums[mid-1] && nums[mid]>nums[mid+1]){
+              return mid;
+           }
+           else if(nums[mid]>nums[mid-1]){
+              start=mid+1;
+           }
+           else{
+              end=mid-1;
+           }
         }
-        return -1;
+        return-1;
     }
 };
 ```
