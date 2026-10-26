@@ -57,9 +57,9 @@ Explanation: The original array was [11,13,15,17] and it was rotated 4 times.
 ## Solution
 
 **Language:** C++  
-**Runtime:** 0 ms  
-**Memory:** 8.2 MB  
-**Submitted:** 2026-10-26T05:29:19.410Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 14.1 MB (beats 76.71%)  
+**Submitted:** 2026-10-26T05:29:27.703Z  
 
 ```cpp
 class Solution {
