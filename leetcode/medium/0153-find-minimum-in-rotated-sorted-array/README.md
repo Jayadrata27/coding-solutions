@@ -57,32 +57,30 @@ Explanation: The original array was [11,13,15,17] and it was rotated 4 times.
 ## Solution
 
 **Language:** C++  
-**Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 14 MB (beats 79.43%)  
-**Submitted:** 2026-10-13T07:18:05.467Z  
+**Runtime:** 0 ms  
+**Memory:** 8.2 MB  
+**Submitted:** 2026-10-26T05:29:19.410Z  
 
 ```cpp
 class Solution {
 public:
     int findMin(vector<int>& nums) {
         int n=nums.size();
-        int start=0,end=n-1,ans;
 
+        int start=0,end=n-1,ans;
         if(nums[0]<nums[n-1]){
-            return nums[0];
+           return nums[0];
         }
         if(n==1){
-          return nums[0];
+            return nums[0];
         }
 
         while(start<=end){
             int mid=start+(end-start)/2;
 
-            //if element in left portion go to right side
             if(nums[0]<=nums[mid]){
                 start=mid+1;
             }
-            // if element in right portion go to left side , and store the mid
             else{
                 ans=nums[mid];
                 end=mid-1;
