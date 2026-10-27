@@ -31,7 +31,7 @@ Explanation: The sorted array will be [1, 4, 9].
 **Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-10T17:09:52.377Z  
+**Submitted:** 2026-10-27T04:32:55.846Z  
 
 ```cpp
 class Solution {
@@ -39,10 +39,9 @@ class Solution {
     void insertionSort(vector<int>& arr) {
         // code here
         int n=arr.size();
-        
         for(int i=1;i<n;i++){
             for(int j=i;j>=0;j--){
-                if(arr[j]<arr[j-1]){
+                if(arr[j]<=arr[j-1]){
                     swap(arr[j],arr[j-1]);
                 }
             }
