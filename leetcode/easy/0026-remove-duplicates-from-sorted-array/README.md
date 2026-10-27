@@ -62,9 +62,9 @@ It does not matter what you leave beyond the returned k (hence they are undersco
 ## Solution
 
 **Language:** C++  
-**Runtime:** 0 ms  
-**Memory:** 8.1 MB  
-**Submitted:** 2026-10-27T04:53:59.010Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 22.4 MB (beats 99.03%)  
+**Submitted:** 2026-10-27T04:55:35.008Z  
 
 ```cpp
 class Solution {
@@ -73,12 +73,13 @@ public:
         int n=nums.size();
 
         int j=0;
-        for(int i=0;i<n+1;i++){
+        for(int i=0;i<n;i++){
             if(nums[j]!=nums[i]){
-                nums[j++]=nums[i];
+                j++;
+                nums[j]=nums[i];
             }
         }
-        return j++;
+        return j+1;
     }
 };
 ```
