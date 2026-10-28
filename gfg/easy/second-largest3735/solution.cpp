@@ -10,12 +10,12 @@ class Solution {
             }
         }
         int secondLargest=-1;
-        for(int i=0;i<n;i++){
-            if(arr[i]==largest){
+        for(int j=0;j<n;j++){
+            if(arr[j]==largest){
                 continue;
             }
-            else if(arr[i]>secondLargest){
-                secondLargest=arr[i];
+            else if(arr[j]>secondLargest){
+                secondLargest=arr[j];
             }
         }
         return secondLargest;
