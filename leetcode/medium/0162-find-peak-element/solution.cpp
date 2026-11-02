@@ -10,6 +10,10 @@ public:
         while(start<=end){
           int mid=start+(end-start)/2;
 
+          if(mid==0){
+            mid++;
+          }
+
           if(nums[mid]>nums[mid-1] && nums[mid]>nums[mid+1]){
              return mid;
           }
