@@ -5,6 +5,12 @@ public:
         if(n==1){
             return 0;
         }
+        if(nums[0]>nums[1]){
+            return 0;
+        }
+        if(nums[n-1]>nums[n-2]){
+            return n-1;
+        }
         int start=0,end=n-1;
         
         while(start<=end){
@@ -12,6 +18,9 @@ public:
 
           if(mid==0){
             mid++;
+          }
+          if(mid==n-1){
+            mid--;
           }
 
           if(nums[mid]>nums[mid-1] && nums[mid]>nums[mid+1]){
