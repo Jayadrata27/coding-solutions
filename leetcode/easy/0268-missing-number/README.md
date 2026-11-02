@@ -62,22 +62,26 @@ Given an array `nums` containing `n` distinct numbers in the range `[0, n]`, ret
 
 **Language:** C++  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 21.8 MB (beats 37.33%)  
-**Submitted:** 2026-10-11T18:04:30.703Z  
+**Memory:** 21.6 MB (beats 98.73%)  
+**Submitted:** 2026-11-02T03:39:31.179Z  
 
 ```cpp
 class Solution {
 public:
     int missingNumber(vector<int>& nums) {
         int n=nums.size();
-        int x=0,y=0;
+
+        int x=0;
         for(int i=0;i<n;i++){
-            x=x^nums[i];
+           x=x^nums[i];
         }
+        int y=0;
         for(int j=1;j<=n;j++){
-           y=y^j;
+            y=y^j;
         }
+
         return x^y;
+
     }
 };
 ```
