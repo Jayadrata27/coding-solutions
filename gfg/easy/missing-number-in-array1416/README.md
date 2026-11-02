@@ -28,16 +28,12 @@ Explanation: Only 1 is present so the missing element is 2.
 
 ```
 
- **Constraints:** 
-1 ≤ arr.size() ≤ 106
-1 ≤ arr[i] ≤ arr.size() + 1
-
 ## Solution
 
 **Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-12T18:03:48.515Z  
+**Submitted:** 2026-11-02T03:40:34.311Z  
 
 ```cpp
 class Solution {
