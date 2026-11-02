@@ -31,7 +31,7 @@ Explanation: The element 15 is not present in the array, but inserting it after 
 **Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-25T09:17:31.154Z  
+**Submitted:** 2026-11-02T03:26:08.356Z  
 
 ```cpp
 class Solution {
@@ -39,8 +39,7 @@ class Solution {
     int searchInsertK(vector<int> &arr, int k) {
         // code here
         int n=arr.size();
-        
-        int start=0,end=n-1,ans=n;
+        int start=0,end=n-1,index=n;
         while(start<=end){
             int mid=start+(end-start)/2;
             
@@ -48,14 +47,14 @@ class Solution {
                 return mid;
             }
             else if(arr[mid]>k){
-                ans=mid;
+                index=mid;
                 end=mid-1;
             }
             else{
                 start=mid+1;
             }
         }
-        return ans;
+        
     }
 };
 ```
