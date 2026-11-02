@@ -22,17 +22,12 @@ Output: [2, 3, 4, 5, 1]
 Explanation: Rotating the array [1, 2, 3, 4, 5] four times clockwise gives the array [2, 3, 4, 5, 1].
 ```
 
-**Constraints:
-**1 ≤ arr.size() ≤ 105
-0 ≤ k ≤ 109
-0 ≤ arr[i] ≤ 109
-
 ## Solution
 
 **Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-24T07:32:46.705Z  
+**Submitted:** 2026-11-02T19:32:35.985Z  
 
 ```cpp
 class Solution {
@@ -40,6 +35,7 @@ class Solution {
     void rotateclockwise(vector<int>& arr, int k) {
         // code here
         int n=arr.size();
+        
         k=k%n;
         
         int i=0,j=n-1;
@@ -51,13 +47,14 @@ class Solution {
             j--;
         }
         i=0,j=k-1;
-        while(i<=j){
+         while(i<=j){
             int temp=arr[i];
             arr[i]=arr[j];
             arr[j]=temp;
             i++;
             j--;
         }
+        
         i=k,j=n-1;
         while(i<=j){
             int temp=arr[i];
