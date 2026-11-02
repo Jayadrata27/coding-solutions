@@ -42,8 +42,8 @@ Explanation: Your function can return either index number 1 where the peak eleme
 
 **Language:** C++  
 **Runtime:** 0 ms  
-**Memory:** 8.1 MB  
-**Submitted:** 2026-11-02T19:52:27.312Z  
+**Memory:** 8 MB  
+**Submitted:** 2026-11-02T19:53:53.495Z  
 
 ```cpp
 class Solution {
@@ -57,6 +57,10 @@ public:
         
         while(start<=end){
           int mid=start+(end-start)/2;
+
+          if(mid==0){
+            mid++;
+          }
 
           if(nums[mid]>nums[mid-1] && nums[mid]>nums[mid+1]){
              return mid;
