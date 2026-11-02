@@ -2,8 +2,8 @@ class Solution {
   public:
     int floorSqrt(int n) {
         // code here
-        int ans=-1;
-        if(n<=1){
+        int index;
+        if(n==1){
             return n;
         }
         int start=1,end=n;
@@ -17,10 +17,10 @@ class Solution {
                 end=mid-1;
             }
             else{
-                ans=mid;
                 start=mid+1;
+                index=mid;
             }
         }
-        return ans;
+        return index;
     }
 };
