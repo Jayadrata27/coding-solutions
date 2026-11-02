@@ -34,15 +34,15 @@ Explanation: 1 is a perfect square, so its square root is 1.
 **Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-25T07:13:27.289Z  
+**Submitted:** 2026-11-02T19:26:08.757Z  
 
 ```cpp
 class Solution {
   public:
     int floorSqrt(int n) {
         // code here
-        int ans=-1;
-        if(n<=1){
+        int index;
+        if(n==1){
             return n;
         }
         int start=1,end=n;
@@ -56,11 +56,11 @@ class Solution {
                 end=mid-1;
             }
             else{
-                ans=mid;
                 start=mid+1;
+                index=mid;
             }
         }
-        return ans;
+        return index;
     }
 };
 ```
