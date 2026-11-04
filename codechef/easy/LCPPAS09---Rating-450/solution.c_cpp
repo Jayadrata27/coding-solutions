@@ -1,0 +1,11 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+  // Write your code below 
+  int a=9;
+  int b=12;
+  cout<<a*b;
+  
+  return 0;
+}
