@@ -33,7 +33,7 @@ Explanation: Missing are 1, 2, 4, 6… and 2nd missing number is 2.
 **Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-03T16:31:36.919Z  
+**Submitted:** 2026-11-04T15:11:28.274Z  
 
 ```cpp
 class Solution {
@@ -41,15 +41,20 @@ class Solution {
     int kthMissing(vector<int> &arr, int k) {
         // code here
         int n=arr.size();
-        
-        for(int i=0;i<n;i++){
-            int totalMissing=arr[i]-(i+1);
-             
-            if(totalMissing>=k){
-                return k+i;
+        int start=0,end=n-1;
+        int ans=n;
+        while(start<=end){
+            int mid=start+(end-start)/2;
+            
+            if(arr[mid]-(mid+1)<k){
+                start=mid+1;
+            }
+            else{
+                ans=mid;
+                end=mid-1;
             }
         }
-        return k+n;
+        return ans+k;
     }
 };
 ```
