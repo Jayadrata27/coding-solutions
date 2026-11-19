@@ -26,7 +26,7 @@ Explanation: Splitting the array as [1, 1] and [2] is optimal. This results in a
 **Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-09T06:21:06.517Z  
+**Submitted:** 2026-11-19T15:02:26.627Z  
 
 ```cpp
 class Solution {
