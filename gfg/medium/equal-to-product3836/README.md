@@ -34,7 +34,7 @@ Explanation: As -10 * 0 = 0, the answer is true.
 **Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-21T10:32:40.234Z  
+**Submitted:** 2026-11-21T10:41:40.484Z  
 
 ```cpp
 #define ll long long 
@@ -42,11 +42,11 @@ class Solution {
 	public:
 	bool isProduct(vector<int>& arr, long long target) {
 		// code here
-		ll int n = arr.size();
+	    int n = arr.size();
 		sort(arr.begin(), arr.end());
 		// figureout the mid = last index of -ve number
-		ll int mid = -1;
-		for (ll int i = 0; i<n; i++) {
+	    int mid = -1;
+		for (int i = 0; i<n; i++) {
 			if (arr[i]<0) {
 				mid = i;
 			}
@@ -95,7 +95,7 @@ class Solution {
 				if (prod == target) {
 					return true;
 				}
-				else if (prod>target) {
+				else if (arr[start]+arr[end]>target) {
 					end++;
 				}
 				else {
