@@ -11,9 +11,6 @@ class Solution {
 			if (arr[i]<0) {
 				mid = i;
 			}
-// 			else {
-// 				break;
-// 			}
 		}
 		// if target is +ve
 		ll int start,end;
