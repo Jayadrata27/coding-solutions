@@ -34,7 +34,7 @@ Explanation: As -10 * 0 = 0, the answer is true.
 **Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-21T11:35:45.266Z  
+**Submitted:** 2026-11-21T11:50:28.975Z  
 
 ```cpp
 #define ll long long 
@@ -87,7 +87,7 @@ class Solution {
 		// if target is -ve
 		else {
 			start = 0, end = mid + 1;
-			while (start<=mid && mid<n) {
+			while (start<=mid && end<n) {
 			    long long prod =(ll)arr[start]+arr[end];
 				if (prod == target) {
 					return true;
