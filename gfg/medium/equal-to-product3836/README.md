@@ -34,7 +34,7 @@ Explanation: As -10 * 0 = 0, the answer is true.
 **Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-21T10:41:40.484Z  
+**Submitted:** 2026-11-21T11:34:46.990Z  
 
 ```cpp
 #define ll long long 
@@ -50,9 +50,9 @@ class Solution {
 			if (arr[i]<0) {
 				mid = i;
 			}
-			else {
-				break;
-			}
+// 			else {
+// 				break;
+// 			}
 		}
 		// if target is +ve
 		ll int start,end;
