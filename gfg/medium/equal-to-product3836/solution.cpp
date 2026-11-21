@@ -48,7 +48,7 @@ class Solution {
 		// if target is -ve
 		else {
 			start = 0, end = mid + 1;
-			while (start<=mid && mid<n) {
+			while (start<=mid && end<n) {
 			    long long prod =(ll)arr[start]+arr[end];
 				if (prod == target) {
 					return true;
