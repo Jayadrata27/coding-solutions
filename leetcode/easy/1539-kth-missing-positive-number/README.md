@@ -10,6 +10,8 @@ Return  *the*  `kth`  ***positive**  integer that is  **missing**  from this arr
 
  
 
+Original
+C++
  **Example 1:** 
 
 ```
@@ -47,24 +49,28 @@ Could you solve this problem in less than O(n) complexity?
 
 **Language:** C++  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 13.2 MB (beats 87.46%)  
-**Submitted:** 2026-11-03T14:29:53.994Z  
+**Memory:** 13.2 MB (beats 47.22%)  
+**Submitted:** 2026-11-23T21:36:50.153Z  
 
 ```cpp
 class Solution {
 public:
     int findKthPositive(vector<int>& arr, int k) {
         int n=arr.size();
-        int missingNumber=k;
-        for(int i=0;i<n;i++){
-            if(arr[i]>missingNumber){
-                return missingNumber;
+        int start=0,end=n-1;
+        int ans=n;
+        while(start<=end){
+            int mid=start+(end-start)/2;
+            int missingNumber=arr[mid]-(mid+1);
+            if(missingNumber<k){
+                start=mid+1;
             }
             else{
-                missingNumber++;
+                ans=mid;
+                end=mid-1;
             }
         }
-        return missingNumber;
+        return ans+k;
     }
 };
 ```
