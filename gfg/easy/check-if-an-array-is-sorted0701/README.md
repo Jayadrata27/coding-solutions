@@ -25,7 +25,7 @@ Explanation: The given array is not sorted.
 **Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-25T05:56:05.905Z  
+**Submitted:** 2026-11-23T06:39:09.001Z  
 
 ```cpp
 class Solution {
