@@ -4,10 +4,16 @@ public:
         int n=nums.size();
         int start=0,end=n-1;
         if(n==1){
-            return n;
+            return 0;
         }
         while(start<=end){
             int mid=start+(end-start)/2;
+            if(mid==0){
+                mid++;
+            }
+            if(mid==n-1){
+                mid--;
+            }
             if(nums[mid]>nums[mid-1] && nums[mid]>nums[mid+1]){
                 return mid;
             }
