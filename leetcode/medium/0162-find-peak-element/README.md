@@ -43,9 +43,9 @@ Explanation: Your function can return either index number 1 where the peak eleme
 ## Solution
 
 **Language:** C++  
-**Runtime:** 0 ms  
-**Memory:** 7.8 MB  
-**Submitted:** 2026-11-23T21:15:08.509Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 12.5 MB (beats 85.36%)  
+**Submitted:** 2026-11-23T21:18:26.582Z  
 
 ```cpp
 class Solution {
@@ -56,13 +56,16 @@ public:
         if(n==1){
             return 0;
         }
+        if(nums[0]>nums[1]){
+            return 0;
+        }
+        if(nums[n-1]>nums[n-2]){
+            return n-1;
+        }
         while(start<=end){
             int mid=start+(end-start)/2;
             if(mid==0){
                 mid++;
-            }
-            if(mid==n-1){
-                mid--;
             }
             if(nums[mid]>nums[mid-1] && nums[mid]>nums[mid+1]){
                 return mid;
