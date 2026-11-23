@@ -14,6 +14,8 @@ You must write an algorithm with `O(log n)` runtime complexity.
 
  
 
+Original
+C++
  **Example 1:** 
 
 ```
@@ -52,38 +54,30 @@ Output: -1
 
 **Language:** C++  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 15.2 MB (beats 64.61%)  
-**Submitted:** 2026-11-03T05:49:42.024Z  
+**Memory:** 15.2 MB (beats 55.07%)  
+**Submitted:** 2026-11-23T06:55:58.118Z  
 
 ```cpp
 class Solution {
 public:
     int search(vector<int>& nums, int target) {
-        int n=nums.size();
-        int start=0,end=n-1;
-        while(start<=end){
-            int mid=start+(end-start)/2;
-
-            if(nums[mid]==target){
+        int n = nums.size();
+        int start = 0, end = n - 1;
+        while (start <= end) {
+            int mid = start + (end - start) / 2;
+            if (nums[mid] == target) {
                 return mid;
-            }
-
-        //    Sorted from left side
-            if(nums[mid]>=nums[0]){
-               if(nums[0]<=target && target<nums[mid]){
-                  end=mid-1;
-               }
-               else{
-                  start=mid+1;
-               }
-            }
-        //  sorted from right side
-            else{
-                if(nums[mid]<target && target<=nums[end]){
-                    start=mid+1;
+            } else if (nums[0] <= nums[mid]) {
+                if (nums[0] <= target && target < nums[mid]) {
+                    end = mid - 1;
+                } else {
+                    start = mid + 1;
                 }
-                else{
-                    end=mid-1;
+            } else {
+                if (nums[mid] < target && target <= nums[end]) {
+                    start = mid + 1;
+                } else {
+                    end = mid - 1;
                 }
             }
         }
