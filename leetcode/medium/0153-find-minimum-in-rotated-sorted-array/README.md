@@ -17,6 +17,8 @@ You must write an algorithm that runs in `O(log n) time`.
 
  
 
+Original
+C++
  **Example 1:** 
 
 ```
@@ -58,36 +60,32 @@ Explanation: The original array was [11,13,15,17] and it was rotated 4 times.
 
 **Language:** C++  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 14.1 MB (beats 76.71%)  
-**Submitted:** 2026-10-26T05:29:27.703Z  
+**Memory:** 14.1 MB (beats 66.53%)  
+**Submitted:** 2026-11-23T09:53:32.386Z  
 
 ```cpp
 class Solution {
 public:
     int findMin(vector<int>& nums) {
         int n=nums.size();
-
         int start=0,end=n-1,ans;
         if(nums[0]<nums[n-1]){
-           return nums[0];
+            ans=nums[0];
         }
-        if(n==1){
-            return nums[0];
-        }
-
         while(start<=end){
             int mid=start+(end-start)/2;
 
-            if(nums[0]<=nums[mid]){
+            if(nums[mid]>=nums[0]){
                 start=mid+1;
             }
             else{
-                ans=nums[mid];
-                end=mid-1;
+              ans=nums[mid];
+              end=mid-1;
             }
         }
-        return ans;
+         return ans;
     }
+   
 };
 ```
 
