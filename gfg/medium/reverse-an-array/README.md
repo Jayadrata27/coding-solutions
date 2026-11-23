@@ -11,7 +11,7 @@ _Description not available._
 **Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-28T04:32:58.266Z  
+**Submitted:** 2026-11-23T21:27:45.380Z  
 
 ```cpp
 class Solution {
@@ -19,9 +19,7 @@ class Solution {
     void reverseArray(vector<int> &arr) {
         // code here
         int n=arr.size();
-        
         for(int i=0;i<n/2;i++){
-            
             int temp=arr[i];
             arr[i]=arr[n-1-i];
             arr[n-1-i]=temp;
