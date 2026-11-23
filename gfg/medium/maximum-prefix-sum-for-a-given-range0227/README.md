@@ -30,7 +30,7 @@ For the range [1, 3], the prefix sums are [-2, 1, 5]. The maximum is 5.
 **Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-23T20:40:32.064Z  
+**Submitted:** 2026-11-23T20:54:56.638Z  
 
 ```cpp
 class Solution {
