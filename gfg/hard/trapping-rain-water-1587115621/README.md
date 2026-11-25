@@ -39,7 +39,7 @@ Explanation: Total water trapped = 0 + 1 + 0 + 1 + 3 + 4 + 0 = 9 units.
 **Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-24T14:24:18.239Z  
+**Submitted:** 2026-11-25T05:39:57.747Z  
 
 ```cpp
 class Solution {
@@ -62,7 +62,7 @@ class Solution {
         
         int totalSum=0;
         for(int i=1;i<n-1;i++){
-            int minLeftRight=min(leftMax[i],rightMax[i]);
+            int minLeftRight=min(leftMax[i-1],rightMax[i+1]);
             if(minLeftRight>arr[i]){
                 totalSum+=minLeftRight-arr[i];
             }
@@ -70,7 +70,7 @@ class Solution {
         return totalSum;
         
     }
-};
+}; 
 ```
 
 ---
