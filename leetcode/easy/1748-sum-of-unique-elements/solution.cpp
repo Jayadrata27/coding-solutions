@@ -3,7 +3,6 @@ public:
     int sumOfUnique(vector<int>& nums) {
         int n=nums.size();
         vector<int>freq(101,0);
-
         for(int i=0;i<n;i++){
             freq[nums[i]]++;
         }
@@ -14,6 +13,5 @@ public:
             }
         }
         return sum;
-
     }
 };
