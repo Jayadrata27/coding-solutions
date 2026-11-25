@@ -10,6 +10,8 @@ Return  *the  **sum**  of all the unique elements of* `nums`.
 
  
 
+Original
+C++
  **Example 1:** 
 
 ```
@@ -48,8 +50,8 @@ Explanation: The unique elements are [1,2,3,4,5], and the sum is 15.
 
 **Language:** C++  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 10.6 MB (beats 79.45%)  
-**Submitted:** 2026-10-24T08:07:48.101Z  
+**Memory:** 10.5 MB (beats 88.04%)  
+**Submitted:** 2026-11-25T17:53:14.881Z  
 
 ```cpp
 class Solution {
@@ -57,7 +59,6 @@ public:
     int sumOfUnique(vector<int>& nums) {
         int n=nums.size();
         vector<int>freq(101,0);
-
         for(int i=0;i<n;i++){
             freq[nums[i]]++;
         }
@@ -68,7 +69,6 @@ public:
             }
         }
         return sum;
-
     }
 };
 ```
