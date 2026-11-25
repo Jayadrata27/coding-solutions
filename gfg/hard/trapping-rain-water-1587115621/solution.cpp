@@ -15,7 +15,7 @@ class Solution {
         for(int i=n-2;i>=0;i--){
             rightMax[i]=max(rightMax[i+1],arr[i]);
         }
-        
+
         int totalSum=0;
         for(int i=1;i<n-1;i++){
             int minLeftRight=min(leftMax[i-1],rightMax[i+1]);
@@ -24,6 +24,6 @@ class Solution {
             }
         }
         return totalSum;
-        
+
     }
-}; 
+};
